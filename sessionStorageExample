@@ -1,0 +1,19 @@
+<script>
+  if (window['Storage']) {
+  // localStorage persists indefinitely
+  var job = sessionStorage.getItem('job-count');
+  if(job==0){
+    var new_value =  parseInt(sessionStorage.getItem('job-count')) + 1;
+    sessionStorage.setItem('job-count',new_value);
+  }else if(job>0){
+  	var new_value =  parseInt(sessionStorage.getItem('job-count')) + 1;
+    sessionStorage.setItem('job-count',new_value);
+  }else{
+  	var jobcount = 0;
+    sessionStorage.setItem('job-count',jobcount);
+  }
+} else {
+  // Fallback for when the browser doesn't support Web Storage API
+  
+}
+</script>
